@@ -23,6 +23,7 @@ async function setup() {
   model = await tf.loadLayersModel(
     "https://motoitanigaki.github.io/model/model.json"
   );
+  console.log(tf);
   console.log(model);
 }
 
