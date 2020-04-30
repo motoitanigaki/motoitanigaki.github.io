@@ -3,7 +3,6 @@
 let faceapi;
 let video;
 let detections;
-let attentionDiv = document.getElementById("attention");
 
 // by default all options are set to true
 const detection_options = {
@@ -111,7 +110,7 @@ async function drawLandmarks(detections) {
       };
     });
     console.log(result[0], result[0].probability, result[0].classNumber);
-    attentionDiv.innerText = `Attention : ${result[0]}`;
+    document.getElementById("attention").innerText = `Attention : ${result[0]}`;
 
     const mouth = detections[i].parts.mouth;
     const nose = detections[i].parts.nose;
