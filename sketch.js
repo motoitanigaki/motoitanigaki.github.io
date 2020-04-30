@@ -110,7 +110,6 @@ async function drawLandmarks(detections) {
       };
     });
     console.log(result[0], result[0].probability, result[0].classNumber);
-    document.getElementById("attention").innerText = `Attention : ${result[0]}`;
 
     const mouth = detections[i].parts.mouth;
     const nose = detections[i].parts.nose;
